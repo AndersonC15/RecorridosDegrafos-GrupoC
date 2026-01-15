@@ -1,4 +1,4 @@
-package io.github.andersonc15.io;
+package io;
 
 /**
  *Clase para validar que la matriz este lista para procesarla
@@ -11,7 +11,6 @@ public class ValidadorMatriz {
         validarRectangular(matriz);
         validarCuadrada(matriz);
         validarValoresPermitidos(matriz);
-        validarSimetria(matriz);
     }
 
     private static void validarNoNula(int[][] matriz) {
@@ -60,18 +59,6 @@ public class ValidadorMatriz {
                     throw new IllegalArgumentException(
                             "Error: Valor inválido en (" + (f + 1) + "," + (c + 1)
                                     + "). Solo se aceptan 0 y 1 por ahora → encontrado: " + valor);
-                }
-            }
-        }
-    }
-
-    public static void validarSimetria(int[][] matriz) {
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = i + 1; j < matriz.length; j++) {
-                if (matriz[i][j] != matriz[j][i]) {
-                    throw new IllegalArgumentException(
-                            "Error: Matriz no simétrica → grafo dirigido o mal definida. Falla en "
-                                    + "(" + (i + 1) + "," + (j + 1) + ")");
                 }
             }
         }

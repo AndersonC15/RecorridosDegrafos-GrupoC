@@ -1,4 +1,4 @@
-package io.github.andersonc15.io;
+package io;
 
 import java.io.IOException;
 import java.nio.file.*;
